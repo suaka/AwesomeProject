@@ -4,16 +4,19 @@
  *
  * @format
  */
-
-import React from 'react';
-import {SafeAreaView} from 'react-native';
-//import Greeting from './components/Greeting';
+import React, {useState} from 'react';
+import {Button, SafeAreaView} from 'react-native';
 import Box from './components/Box';
 
 const App = () => {
-  //const name = 'JSX';
+  const [visible, setVisible] = useState(true);
+  // 버튼을 누르는 컴포넌트 사용
+  const onPress = () => {
+    setVisible(!visible);
+  };
   return (
     <SafeAreaView>
+      <Button title="토글" onPress={onPress} />
       <Box rounded={true} size="large" color="blue" />
     </SafeAreaView>
   );
