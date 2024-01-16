@@ -1,24 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
-import {Button, SafeAreaView} from 'react-native';
-import Box from './components/Box';
+import {SafeAreaView, StyleSheet} from 'react-native';
 
 const App = () => {
-  const [visible, setVisible] = useState(true);
-  // 버튼을 누르는 컴포넌트 사용
-  const onPress = () => {
-    setVisible(!visible);
-  };
-  return (
-    <SafeAreaView>
-      <Button title="토글" onPress={onPress} />
-      <Box rounded={true} size="large" color="blue" />
-    </SafeAreaView>
-  );
+  return <SafeAreaView style={styles.full} />;
 };
+
+const styles = StyleSheet.create({
+  full: {
+    flex: 1, // 자신이 현재 차지하고있는 영역을 전체 차지하겠다는 의미이다.
+    //backgroundColor: 'cyan',
+  },
+});
+
 export default App;
