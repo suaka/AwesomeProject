@@ -1,6 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
+import Counter from './components/Counter';
 
 const App = () => {
   return <SafeAreaView style={styles.full} />;
