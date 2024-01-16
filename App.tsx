@@ -1,10 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import Counter from './components/Counter';
 
 const App = () => {
-  return <SafeAreaView style={styles.full} />;
+  const [count, setCount] = useState(0);
+
+  const minus = () => setCount(count - 1);
+  const plus = () => setCount(count + 2);
+  //const minus = () => setCount(count - 1);
+
+  return (
+    <SafeAreaView style={styles.full}>
+      <Counter count={count} onIncrease={plus} onDecrease={minus} />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
